@@ -1,64 +1,58 @@
-<<<<<<< HEAD
-# EmployeeOnboardingForm
+# 🧑‍💼 Employee Onboarding Portal
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+A modern, responsive **Employee Onboarding Portal** built using **Angular**.  
+This application streamlines employee onboarding by collecting personal details, job information, and documents through a step-by-step workflow.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Live Demo
+
+🔗 **Live URL:**  
+https://sneharudresh.github.io/angular-employee-onboarding-stepper-forms/
+
+---
+
+## ✨ Features
+
+- Multi-step onboarding form (Stepper UI)
+- Clean and modern user interface
+- Responsive design
+- Personal Details, Job Details & Documents flow
+- Submission success confirmation screen
+- Built using Angular best practices
+
+---
+
+## 🛠️ Tech Stack
+
+- **Angular**
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **Angular Material**
+
+---
+
+## 📸 Screenshots
+
+### Personal Information Step
+![Personal Info](screenshots/step-1-personal-info.png)
+
+### Job Details Step
+![Job Details](screenshots/step-2-job-details.png)
+
+### Documents Upload Step
+![Documents](screenshots/step-3-documents.png)
+
+### Submission Success
+![Success](screenshots/success-page.png)
+
+---
+
+## 📦 Installation & Setup
 
 ```bash
+git clone https://github.com/sneharudresh/angular-employee-onboarding-stepper-forms.git
+cd employee-onboarding-form
+npm install
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# angular-employee-onboarding-stepper-forms
-A modern employee onboarding application built with Angular and Angular Material featuring a multi-step stepper form with field validations, resume upload supporting PDF and DOC formats, editable completed steps, and a success UI displayed after form submission
->>>>>>> 94a70015f4ecb47a61c8b6a31b3cdf904ff9a15f
