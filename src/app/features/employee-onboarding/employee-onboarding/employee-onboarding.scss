@@ -1,0 +1,214 @@
+.page-wrapper {
+  min-height: 100vh;
+
+  /* Background image */
+  background-image:
+   
+    url('https://i.postimg.cc/TPkDFg5G/ocean.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  padding: 48px 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* Page Header */
+.page-header {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page-header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: #c7d2fe;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+.onboarding-card {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  padding: 28px 32px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Page Heading */
+.page-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.page-subtitle {
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* Stepper Container */
+.custom-stepper {
+  background-color: #f8fafc;
+  padding: 24px;
+  border-radius: 14px;
+}
+
+/* Stepper Header Styling */
+::ng-deep .mat-horizontal-stepper-header-container {
+  background-color: #eef2ff;
+  padding: 10px 6px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+/* Step Labels */
+::ng-deep .mat-step-label {
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Active Step */
+::ng-deep .mat-step-header.mat-active {
+  background-color: #e0e7ff;
+  border-radius: 8px;
+}
+
+/* Completed Step Icon */
+::ng-deep .mat-step-header.mat-completed .mat-step-icon {
+  background-color: #22c55e;
+}
+
+/* Default Step Icon */
+::ng-deep .mat-step-icon {
+  background-color: #6366f1;
+  color: #fff;
+}
+
+/* Section Headings */
+h3 {
+  grid-column: span 2;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* Form Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+/* Actions */
+.actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* File Upload */
+.file-upload {
+  margin: 24px 0;
+}
+
+.upload-box {
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #475569;
+  font-weight: 500;
+}
+
+.upload-box:hover {
+  border-color: #3f51b5;
+  background-color: #f1f5ff;
+}
+
+.document-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-upload {
+  margin: 20px 0 10px;
+}
+
+.file-error {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+/* Success Screen */
+.success-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.success-icon {
+  width: 90px;
+  height: 90px;
+  background: #22c55e;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+
+.success-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #1f2937;
+}
+
+.success-container p {
+  font-size: 15px;
+  color: #6b7280;
+  margin-bottom: 32px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h3,
+  .actions {
+    grid-column: span 1;
+  }
+}

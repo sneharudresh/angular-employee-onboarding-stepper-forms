@@ -1,0 +1,171 @@
+<div class="page-wrapper">
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Employee Onboarding Portal</h1>
+    <p>
+      Streamline employee details, job information, and document submission
+      in one smooth workflow.
+    </p>
+  </div>
+
+  <mat-card class="onboarding-card">
+
+    <!-- ✅ SUCCESS SCREEN -->
+    <div *ngIf="isSubmitted" class="success-container">
+
+      <div class="success-icon">✔</div>
+
+      <h2>Employee Submitted Successfully</h2>
+
+      <p>
+        The employee onboarding information has been submitted.
+        You may onboard another employee if required.
+      </p>
+
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="resetPortal()">
+        Open Employee Onboarding Portal
+      </button>
+
+    </div>
+
+    <!-- ✅ FORM + STEPPER -->
+    <ng-container *ngIf="!isSubmitted">
+
+      <mat-card-title class="page-title">
+        Onboard Employee Details
+      </mat-card-title>
+
+      <mat-card-subtitle class="page-subtitle">
+        Please complete all steps to onboard a new employee
+      </mat-card-subtitle>
+
+      <mat-horizontal-stepper linear class="custom-stepper">
+
+        <!-- STEP 1 -->
+        <mat-step [stepControl]="personalForm" label="Personal Info">
+          <form [formGroup]="personalForm" class="form-grid">
+
+            <h3>Personal Details</h3>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Full Name</mat-label>
+              <input matInput formControlName="fullName">
+              <mat-error *ngIf="personalForm.get('fullName')?.hasError('required')">
+                Full name is required
+              </mat-error>
+              <mat-error *ngIf="personalForm.get('fullName')?.hasError('minlength')">
+                Minimum 3 characters required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email">
+              <mat-error *ngIf="personalForm.get('email')?.hasError('required')">
+                Email is required
+              </mat-error>
+              <mat-error *ngIf="personalForm.get('email')?.hasError('email')">
+                Enter a valid email
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Phone</mat-label>
+              <input matInput formControlName="phone">
+              <mat-error *ngIf="personalForm.get('phone')?.hasError('required')">
+                Phone number is required
+              </mat-error>
+              <mat-error *ngIf="personalForm.get('phone')?.hasError('pattern')">
+                Enter a valid 10-digit mobile number
+              </mat-error>
+            </mat-form-field>
+
+            <div class="actions">
+              <button mat-raised-button color="primary" matStepperNext>
+                Next
+              </button>
+            </div>
+
+          </form>
+        </mat-step>
+
+        <!-- STEP 2 -->
+        <mat-step [stepControl]="jobForm" label="Job Details">
+          <form [formGroup]="jobForm" class="form-grid">
+
+            <h3>Job Details</h3>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Role</mat-label>
+              <mat-select formControlName="role">
+                <mat-option value="Angular Developer">Angular Developer</mat-option>
+                <mat-option value="Backend Developer">Backend Developer</mat-option>
+              </mat-select>
+              <mat-error *ngIf="jobForm.get('role')?.hasError('required')">
+                Role is required
+              </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+              <mat-label>Experience (Years)</mat-label>
+              <input matInput type="number" formControlName="experience">
+              <mat-error *ngIf="jobForm.get('experience')?.hasError('required')">
+                Experience is required
+              </mat-error>
+            </mat-form-field>
+
+            <div class="actions">
+              <button mat-stroked-button matStepperPrevious>Back</button>
+              <button mat-raised-button color="primary" matStepperNext>
+                Next
+              </button>
+            </div>
+
+          </form>
+        </mat-step>
+
+        <!-- STEP 3 -->
+        <mat-step [stepControl]="documentForm" label="Documents">
+          <form [formGroup]="documentForm" class="document-form">
+
+            <h3>Upload Resume</h3>
+
+            <div class="file-upload">
+              <input
+                type="file"
+                id="fileInput"
+                hidden
+                accept=".pdf,.doc,.docx"
+                (change)="onFileSelect($event)"
+              >
+
+              <label for="fileInput" class="upload-box">
+                <span *ngIf="!selectedFile">Click to upload resume (PDF/DOC)</span>
+                <span *ngIf="selectedFile">{{ selectedFile.name }}</span>
+              </label>
+
+              <div class="file-error"
+                *ngIf="documentForm.get('resume')?.invalid && documentForm.touched">
+                Resume is required (PDF/DOC only)
+              </div>
+            </div>
+
+            <div class="actions">
+              <button mat-stroked-button matStepperPrevious>Back</button>
+              <button mat-raised-button color="accent" (click)="submit()">
+                Submit
+              </button>
+            </div>
+
+          </form>
+        </mat-step>
+
+      </mat-horizontal-stepper>
+    </ng-container>
+
+  </mat-card>
+</div>
