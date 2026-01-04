@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EmployeeOnboardingForm
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
@@ -57,3 +58,7 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# angular-employee-onboarding-stepper-forms
+A modern employee onboarding application built with Angular and Angular Material featuring a multi-step stepper form with field validations, resume upload supporting PDF and DOC formats, editable completed steps, and a success UI displayed after form submission
+>>>>>>> 94a70015f4ecb47a61c8b6a31b3cdf904ff9a15f
