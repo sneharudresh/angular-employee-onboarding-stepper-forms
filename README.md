@@ -36,13 +36,13 @@ https://sneharudresh.github.io/angular-employee-onboarding-stepper-forms/
 ## 📸 Screenshots
 
 ### Personal Information Step
-![Personal Info](screenshots/step-1-personal-info.png)
+![Personal Info](screenshots/personal-info.png)
 
 ### Job Details Step
-![Job Details](screenshots/step-2-job-details.png)
+![Job Details](screenshots/job-details.png)
 
 ### Documents Upload Step
-![Documents](screenshots/step-3-documents.png)
+![Documents](screenshots/documents.png)
 
 ### Submission Success
 ![Success](screenshots/success-page.png)
